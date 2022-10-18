@@ -48,7 +48,7 @@ header {
   display: flex;
   -ms-align-items: center;
   align-items: center;
-  background-color: #b2b2b2;
+  /* background-color: #b2b2b2; */
 }
 
 .header {
@@ -85,11 +85,24 @@ nav ul {
   flex-wrap: wrap;
 }
 
+nav li ul li{
+  transition: all .3s ease-in-out;
+}
+
+nav li ul li:hover{
+  color: #757575;
+  transition: all .3s ease-in-out;
+}
+
 .header__telephone{
   display: flex;
   -ms-align-items: center;
   align-items: center;
   gap: 0.6875rem;
+}
+
+.header__number > span{
+  cursor: pointer;
 }
 
 .header-decor{
@@ -108,10 +121,15 @@ main{
   background-color: #ffffff;
 }
 
+.sec-wrapper{
+  /* background: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Summer-sailing-in-croatia-photos-1920x1080.jpg") no-repeat; */
+  background-color: #b2b2b2;
+}
+
 .title-section-wrapper{
   position: relative;
   height: calc(100vh - 100px);
-  background-color: #b2b2b2;
+  /* background-color: #b2b2b2; */
 }
 
 .title-section-wrapper::before{
@@ -163,6 +181,12 @@ main{
   line-height: calc(3rem);;
   font-weight: 700;
   font-size: calc(1rem);
+  transition: 0.3s;
+}
+
+.title-section__plan-button:hover{
+  background-color: #DC821E;
+  transition: 0.3s;
 }
 
 .title-section__intro-block{
@@ -206,6 +230,7 @@ main{
   justify-content: flex-start;
   color: #4a4a4a;
   overflow: hidden;
+  padding-top: calc(5.46875vw + 2.8125rem);
 }
 
 .basic-article{
@@ -264,6 +289,7 @@ main{
   user-select: none;
   font-weight: 400;
   letter-spacing: .02rem;
+  cursor: pointer;
 }
 
 .primary-section__advantage > img{
@@ -304,6 +330,7 @@ main{
   border: 1px solid #999999;
   width: calc(0.25vw + 0.7rem); /*16px, 30 70*/
   height: calc(0.25vw + 0.7rem); /*16px, 30 70*/
+  cursor: pointer;
 }
 
 .primary-section__advantages ul.slick-dots li button{
@@ -314,6 +341,7 @@ main{
   height: calc(.125vw + .35rem); /*8px, 30 70*/
   border: 0;
   outline: none;
+  cursor: pointer;
 }
 
 .primary-section__advantages ul.slick-dots li.slick-active{
@@ -337,7 +365,6 @@ main{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
 }
 
 .primary-section__places-search{
@@ -349,7 +376,7 @@ main{
   width: 100%;
 }
 
-.primary-section__places-search > svg{
+.primary-section__places-search svg{
   font-size: calc(1rem + 0.72916666vw);
   position: absolute;
   left: calc(47.96238% - 1rem - 0.72916666vw);
@@ -362,7 +389,8 @@ main{
   color: inherit;
   outline: none;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
 }
 
@@ -370,6 +398,7 @@ main{
   width: 47.96238%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .primary-section__places-search > div:nth-of-type(2){
@@ -377,6 +406,7 @@ main{
   justify-content: flex-start;
   width: 52.03762%;
   max-width: 52.03762%;
+  align-items: center;
 }
 
 .primary-section__places-slider{
@@ -406,12 +436,14 @@ main{
   font-weight: 700;
   letter-spacing: 0.02em;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .primary-section__places-prev-arrow,
 .primary-section__places-next-arrow{
   font-size: calc(1.5rem + 0.834vw);
   color: #fbad27;
+  cursor: pointer;
 }
 
 .primary-section__places-slider-wrapper > .slick-disabled{
@@ -597,6 +629,7 @@ main{
   border: 1px solid #999999;
   width: calc(0.25vw + 0.7rem); /*16px, 30 70*/
   height: calc(0.25vw + 0.7rem); /*16px, 30 70*/
+  cursor: pointer;
 }
 
 .review-article__reviews-slider ul.slick-dots li button{
@@ -610,6 +643,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .review-article__reviews-slider ul.slick-dots li.slick-active{
@@ -661,13 +695,14 @@ main{
   height: calc(1.5vw + 1.2rem);
   border: 0.104vw solid #ffffff;
   border-radius: calc(0.75vw + 0.6rem);
-  transition: .2s ease;
+  transition: .3s ease;
   cursor: pointer;
   margin-left: 7vw;
 }
 
 .booking__button:hover{
   background-color: #DC821E;
+  transition: .3s ease;
 }
 
 footer{
@@ -707,6 +742,10 @@ footer{
   font-weight: 400;
   letter-spacing: 0.02em;
   color: #616161;
+}
+
+.copyable{
+  cursor: pointer;
 }
 
 .footer-main__icons-wrapper{

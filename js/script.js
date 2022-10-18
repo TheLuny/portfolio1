@@ -18,12 +18,12 @@ $(document).ready(function(){
     rows: 2,
     responsive: [
       {
-        breakpoint: 580,
+        breakpoint: 581,
         settings: {
           slidesToShow: 2,
         }
       }
-    ]
+    ],
   })
   $(".review-article__reviews-slider").slick({
     arrows: false,
@@ -41,4 +41,21 @@ $(document).ready(function(){
     $(".primary-section__secondary-column > img").height($(".primary-section__main-column .primary-section__blog-post").height());
     $(".primary-section__main-column > img").height(Math.max($(blog_post1).height(), $(blog_post1).height()))
   }
+
+  document.querySelectorAll(".primary-section__advantage").forEach((item, i) => {
+    item.onclick = function() {
+      $(".primary-section__advantages").slick("slickGoTo", i);
+    }
+  });
+
+  function copyOnClick(item){
+    var str = document.querySelectorAll(item);
+    str.forEach((item, i) => {
+      item.onclick = function(){
+        window.getSelection().selectAllChildren(item);
+        document.execCommand("Copy")
+      }
+    });
+  }
+  copyOnClick(".copyable")
 });
